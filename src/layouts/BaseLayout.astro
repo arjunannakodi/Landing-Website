@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+import "@fontsource-variable/inter";
+
+export interface Props {
+    title: string;
+    description?: string;
+}
+
+const {
+    title,
+    description = "Replicate Notion is the connected workspace where better, faster work happens.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+        <link rel="preconnect" href="https://www.transparenttextures.com" />
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+        </style>
+    </head>
+    <body class="text-gray-900 bg-white antialiased">
+        <slot />
+        <script>
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1,
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.addEventListener("astro:page-load", () => {
+                const hiddenElements =
+                    document.querySelectorAll(".animate-on-scroll");
+                hiddenElements.forEach((el) => observer.observe(el));
+            });
+
+            // Initial load support
+            const hiddenElements =
+                document.querySelectorAll(".animate-on-scroll");
+            hiddenElements.forEach((el) => observer.observe(el));
+        </script>
+    </body>
+</html>
