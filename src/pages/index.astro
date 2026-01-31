@@ -30,58 +30,70 @@ import NotionAppPreview from "../components/NotionAppPreview.astro";
 
 		<NotionNewFeature />
 
-		<section
-			class="bg-[#050511] pt-24 pb-0 relative overflow-hidden border-t border-white/10"
-		>
-			<!-- Glow Effects -->
+		<section class="max-w-[1400px] mx-auto px-4 md:px-8 mb-24">
 			<div
-				class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-500/20 blur-[100px] pointer-events-none"
+				class="bg-[#050511] rounded-[3rem] relative overflow-hidden pt-24 pb-0 px-6 text-center shadow-2xl border border-gray-900/50 group"
 			>
-			</div>
-
-			<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-				<h2
-					class="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight animate-on-scroll"
-				>
-					Get started for free
-				</h2>
-				<p
-					class="text-xl text-blue-200/80 mb-10 animate-on-scroll max-w-xl mx-auto"
-					style="transition-delay: 100ms"
-				>
-					Play around with it first. Pay and add your team later.
-				</p>
+				<!-- Glow Effects -->
 				<div
-					class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll mb-16"
-					style="transition-delay: 200ms"
+					class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-600/20 blur-[120px] pointer-events-none opacity-50 group-hover:opacity-75 transition-opacity duration-1000"
 				>
-					<button
-						class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-500 transition-all hover:scale-105 shadow-xl shadow-blue-900/20"
-						>Try Replicate Notion free</button
-					>
-					<button
-						class="text-white font-medium hover:text-blue-300 flex items-center justify-center gap-2 group px-6 py-4"
-						>Request a demo <span
-							aria-hidden="true"
-							class="group-hover:translate-x-1 transition-transform"
-							>&rarr;</span
-						></button
-					>
 				</div>
 
-				<!-- Hand Image -->
-				<div
-					class="relative w-[30rem] max-w-full mx-auto -mb-10 animate-fade-in-up"
-					style="animation-delay: 0.3s"
-				>
+				<div class="relative z-10 max-w-4xl mx-auto">
+					<h2
+						class="text-4xl md:text-7xl font-bold mb-8 text-white tracking-tight leading-tight"
+					>
+						Get started for free
+					</h2>
+					<p
+						class="text-xl text-blue-200/60 mb-12 max-w-xl mx-auto leading-relaxed"
+					>
+						Play around with it first. No credit card required.
+					</p>
 					<div
-						class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#050511] to-transparent z-10"
+						class="flex flex-col sm:flex-row justify-center gap-4 mb-20"
+					>
+						<button
+							class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-500 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(37,99,235,0.5)]"
+							>Try Replicate Notion free</button
+						>
+						<button
+							class="text-white font-medium hover:text-blue-300 flex items-center justify-center gap-2 group px-6 py-4 transition-colors"
+							>Request a demo <span
+								aria-hidden="true"
+								class="group-hover:translate-x-1 transition-transform"
+								>&rarr;</span
+							></button
+						>
+					</div>
+				</div>
+
+				<!-- Hand Image Container -->
+				<div
+					class="relative w-full max-w-2xl mx-auto -mb-16 md:-mb-24 perspective-1000"
+				>
+					<!-- Fade edges to blend square image into card -->
+					<div
+						class="absolute inset-0 z-20 pointer-events-none bg-gradient-to-t from-[#050511] via-transparent to-transparent h-40 bottom-0"
 					>
 					</div>
+					<!-- Bottom blend -->
+					<div
+						class="absolute inset-0 z-20 pointer-events-none bg-gradient-to-l from-[#050511] via-transparent to-transparent w-24 right-0"
+					>
+					</div>
+					<!-- Right blend -->
+					<div
+						class="absolute inset-0 z-20 pointer-events-none bg-gradient-to-r from-[#050511] via-transparent to-transparent w-24 left-0"
+					>
+					</div>
+					<!-- Left blend -->
+
 					<img
 						src="/images/hand-notion.png"
 						alt="Hand holding Replicate Notion logo"
-						class="w-full h-auto drop-shadow-2xl"
+						class="w-full h-auto drop-shadow-2xl relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-700 mix-blend-lighten"
 					/>
 				</div>
 			</div>
