@@ -2,73 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
-import FeatureCard from "../components/FeatureCard.astro";
 import Footer from "../components/Footer.astro";
+import BentoGrid from "../components/BentoGrid.astro";
 
 import NotionNewFeature from "../components/NotionNewFeature.astro";
 import NotionAppPreview from "../components/NotionAppPreview.astro";
-
-const features = [
-	{
-		title: "AI Assisted Writing",
-		desc: "Write faster and clearer with AI.",
-		icon: "/icons/ai.svg",
-	},
-	{
-		title: "Wikis",
-		desc: "Centralize your knowledge.",
-		icon: "/icons/wiki.svg",
-	},
-	{
-		title: "Projects",
-		desc: "Manage complex workflows.",
-		icon: "/icons/projects.svg",
-	},
-	{
-		title: "Docs",
-		desc: "Simple, powerful documents.",
-		icon: "/icons/docs.svg",
-	},
-];
 ---
 
 <BaseLayout title="Replicate Notion - Your Connected Workspace">
 	<Navbar />
 	<main>
 		<Hero />
-		<NotionNewFeature />
 
-		<section class="max-w-6xl mx-auto px-6 py-24">
-			<div class="text-center mb-16 animate-on-scroll">
-				<h2 class="text-3xl md:text-5xl font-bold mb-4">
-					Millions run on Replicate Notion every day
-				</h2>
-				<p class="text-xl text-gray-600 max-w-2xl mx-auto">
-					Powering the world's best teams, from next-generation
-					startups to established enterprises.
-				</p>
-			</div>
-
-			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-				{
-					features.map((feature, index) => (
-						<div
-							class="animate-on-scroll"
-							style={`transition-delay: ${index * 100}ms`}
-						>
-							<FeatureCard {...feature} />
-						</div>
-					))
-				}
-			</div>
-
-			<div class="mt-24 text-center animate-on-scroll">
-				<h3 class="text-3xl font-bold mb-6">
-					Consolidate tools. Cut costs.
-				</h3>
+		<!-- App Preview Hero Visual -->
+		<div
+			class="px-4 md:px-8 max-w-[1400px] mx-auto -mt-10 mb-32 relative z-20 animate-fade-in-up"
+			style="animation-delay: 0.4s; animation-fill-mode: backwards;"
+		>
+			<div
+				class="border-[8px] border-white/50 backdrop-blur-xl rounded-[2rem] shadow-2xl"
+			>
 				<NotionAppPreview />
 			</div>
-		</section>
+		</div>
+
+		<BentoGrid />
+
+		<NotionNewFeature />
 
 		<section class="bg-gray-50 py-24 border-t border-b border-gray-200">
 			<div class="max-w-4xl mx-auto px-6 text-center">

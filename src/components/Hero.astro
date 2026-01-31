@@ -2,218 +2,98 @@
 
 ---
 
-<section class="pt-12 pb-24 px-6 max-w-6xl mx-auto overflow-hidden">
-    <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
-        <!-- Text Content -->
-        <div class="flex-1 text-center md:text-left z-10">
-            <h1
-                class="animate-fade-in-up text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-gray-900 mb-6"
-            >
-                One workspace.<br />Zero busywork.
-            </h1>
+--- ---
 
-            <p
-                class="animate-fade-in-up mt-6 text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto md:mx-0"
-                style="animation-delay: 0.1s; animation-fill-mode: backwards;"
-            >
-                Replicate Notion is where your teams and AI agents capture
-                knowledge, find answers, and automate projects. Now a team of 7
-                feels like 70.
-            </p>
+<section class="pt-24 pb-12 px-6 max-w-7xl mx-auto overflow-hidden relative">
+    <!-- Background Gradient Spot -->
+    <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-blue-50 to-transparent opacity-50 blur-3xl -z-10 pointer-events-none"
+    >
+    </div>
 
-            <div
-                class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 animate-fade-in-up"
-                style="animation-delay: 0.2s; animation-fill-mode: backwards;"
+    <div
+        class="flex flex-col items-center text-center max-w-4xl mx-auto mb-20 z-10 relative"
+    >
+        <!-- Badge -->
+        <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm text-gray-600 font-medium text-xs mb-8 hover:bg-gray-50 transition-colors cursor-pointer"
+        >
+            <span class="flex h-2 w-2 relative">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+                ></span>
+                <span
+                    class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"
+                ></span>
+            </span>
+            New: Notion AI 2.0 is here
+            <svg
+                class="w-3 h-3 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"></path></svg
             >
-                <button
-                    class="bg-notion-blue text-white px-8 py-3 rounded-lg font-bold text-base hover:bg-blue-600 transition-all hover:shadow-lg active:scale-95"
-                >
-                    Get Replicate Notion free
-                </button>
-                <button
-                    class="bg-white text-notion-blue px-8 py-3 rounded-lg font-bold text-base hover:bg-blue-50 transition-colors border border-transparent hover:border-blue-100"
-                >
-                    Request a demo
-                </button>
-            </div>
         </div>
 
-        <!-- Notion-style SVG Illustration -->
-        <div
-            class="flex-1 w-full relative animate-fade-in-up"
-            style="animation-delay: 0.3s; animation-fill-mode: backwards;"
+        <!-- Headline -->
+        <h1
+            class="animate-fade-in-up text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-gray-900 mb-8 leading-[1.1]"
         >
-            <svg
-                viewBox="0 0 500 400"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-full h-auto drop-shadow-xl"
+            The connected <br class="hidden md:block" />
+            <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"
+                >workspace.</span
             >
-                <!-- Background Blob -->
-                <path
-                    d="M430.5 285.5C409.5 348 316.5 385 224.5 369C132.5 353 41.5 284 31.5 198C21.5 112 92.5 9 184.5 25C276.5 41 389.5 77 430.5 163C471.5 249 451.5 223 430.5 285.5Z"
-                    fill="#F3F4F6"></path>
+        </h1>
 
-                <!-- Main Window Card -->
-                <rect
-                    x="60"
-                    y="80"
-                    width="380"
-                    height="260"
-                    rx="12"
-                    fill="white"
-                    stroke="#E5E7EB"
-                    stroke-width="2"></rect>
-                <circle cx="85" cy="105" r="4" fill="#EF4444"></circle>
-                <circle cx="100" cy="105" r="4" fill="#F59E0B"></circle>
-                <circle cx="115" cy="105" r="4" fill="#10B981"></circle>
+        <!-- Subhead -->
+        <p
+            class="animate-fade-in-up mt-2 text-xl md:text-2xl text-gray-500 mb-10 max-w-2xl leading-relaxed"
+            style="animation-delay: 0.1s; animation-fill-mode: backwards;"
+        >
+            Wiki, docs, and projects. Together. <br class="hidden md:block" />
+            Write better, think clearly, and stay organized.
+        </p>
 
-                <!-- Header Lines -->
-                <rect
-                    x="75"
-                    y="140"
-                    width="120"
-                    height="12"
-                    rx="2"
-                    fill="#111827"></rect>
-                <rect
-                    x="75"
-                    y="165"
-                    width="200"
-                    height="6"
-                    rx="1"
-                    fill="#E5E7EB"></rect>
-
-                <!-- Kanban Columns -->
-                <g transform="translate(75, 200)">
-                    <!-- Column 1 -->
-                    <rect
-                        x="0"
-                        y="0"
-                        width="100"
-                        height="120"
-                        rx="4"
-                        fill="#F9FAFB"></rect>
-                    <rect
-                        x="10"
-                        y="10"
-                        width="40"
-                        height="6"
-                        rx="1"
-                        fill="#9CA3AF"></rect>
-                    <rect
-                        x="10"
-                        y="25"
-                        width="80"
-                        height="35"
-                        rx="3"
-                        fill="white"
-                        stroke="#F3F4F6"
-                        stroke-width="1"></rect>
-                    <rect
-                        x="10"
-                        y="70"
-                        width="80"
-                        height="35"
-                        rx="3"
-                        fill="white"
-                        stroke="#F3F4F6"
-                        stroke-width="1"></rect>
-                </g>
-                <g transform="translate(190, 200)">
-                    <!-- Column 2 -->
-                    <rect
-                        x="0"
-                        y="0"
-                        width="100"
-                        height="120"
-                        rx="4"
-                        fill="#F9FAFB"></rect>
-                    <rect
-                        x="10"
-                        y="10"
-                        width="50"
-                        height="6"
-                        rx="1"
-                        fill="#9CA3AF"></rect>
-                    <rect
-                        x="10"
-                        y="25"
-                        width="80"
-                        height="50"
-                        rx="3"
-                        fill="white"
-                        stroke="#F3F4F6"
-                        stroke-width="1"></rect>
-                </g>
-                <g transform="translate(305, 200)">
-                    <!-- Column 3 -->
-                    <rect
-                        x="0"
-                        y="0"
-                        width="55"
-                        height="120"
-                        rx="4"
-                        fill="#F9FAFB"></rect>
-                    <rect
-                        x="10"
-                        y="10"
-                        width="30"
-                        height="6"
-                        rx="1"
-                        fill="#9CA3AF"></rect>
-                </g>
-
-                <!-- Floating Elements - "Decorations" -->
-                <circle cx="420" cy="60" r="15" fill="#3B82F6" opacity="0.1"
-                ></circle>
-                <rect
-                    x="40"
-                    y="320"
-                    width="30"
-                    height="30"
-                    rx="8"
-                    fill="#10B981"
-                    opacity="0.1"
-                    transform="rotate(-15 40 320)"></rect>
-
-                <!-- Cursor -->
-                <path
-                    d="M330 280L345 320L355 310L370 330L380 320L365 300L385 300L330 280Z"
-                    fill="#1F2937"
-                    stroke="white"
-                    stroke-width="2"></path>
-            </svg>
+        <!-- Buttons -->
+        <div
+            class="flex flex-col sm:flex-row items-center gap-4 animate-fade-in-up"
+            style="animation-delay: 0.2s; animation-fill-mode: backwards;"
+        >
+            <button
+                class="bg-black text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-gray-200"
+            >
+                Get Replicate Notion free
+            </button>
+            <button
+                class="bg-white text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-colors border border-gray-200 hover:border-gray-300"
+            >
+                Request a demo
+            </button>
         </div>
     </div>
 
     <!-- Trusted Teams -->
-    <div class="text-center mt-12 border-t border-gray-100 pt-12">
+    <div class="text-center mt-12 border-t border-gray-100/50 pt-12">
         <p
-            class="text-gray-500 font-medium mb-8 text-sm uppercase tracking-wider"
+            class="text-gray-400 font-medium mb-8 text-sm uppercase tracking-widest"
         >
-            Trusted by top teams
+            Trusted by teams at
         </p>
         <div
-            class="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500"
+            class="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
         >
-            <!-- Brand Placeholders -->
-            <div class="flex items-center gap-2 font-bold text-xl">
-                <span class="w-6 h-6 bg-gray-800 rounded-full"></span> OpenAI
-            </div>
-            <div class="flex items-center gap-2 font-bold text-xl">
-                <span
-                    class="w-6 h-6 border-2 border-gray-800 rounded flex items-center justify-center text-[10px]"
-                    >F</span
-                > Figma
-            </div>
-            <div class="flex items-center gap-2 font-bold text-xl">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"
-                    ><path d="M12 2L2 22h20L12 2z"></path></svg
-                > Vercel
-            </div>
-            <div class="flex items-center gap-2 font-bold text-xl">RAMP</div>
-            <div class="flex items-center gap-2 font-bold text-xl">NVIDIA</div>
+            <!-- Simple text logos for speed/cleanliness -->
+            <span class="font-bold text-xl font-inter">Figma</span>
+            <span class="font-bold text-xl font-inter">Linear</span>
+            <span class="font-bold text-xl font-inter">Stripe</span>
+            <span class="font-bold text-xl font-inter">Pinterest</span>
+            <span class="font-bold text-xl font-inter">Pixar</span>
         </div>
     </div>
 </section>
