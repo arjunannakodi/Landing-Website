@@ -1,0 +1,518 @@
+---
+
+---
+
+<section class="bg-black py-24 text-white overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
+            <!-- Left Side: Navigation -->
+            <div class="lg:w-1/3 flex flex-col justify-center space-y-8 z-10">
+                <!-- Tab Categories -->
+                <div class="space-y-2" id="feature-tabs">
+                    <!-- AI Tab -->
+                    <div
+                        class="feature-tab group cursor-pointer"
+                        data-target="ai"
+                    >
+                        <h3
+                            class="text-3xl font-bold text-gray-500 group-hover:text-gray-300 transition-colors duration-300 active-tab-title"
+                        >
+                            Nexa AI
+                        </h3>
+                        <div class="tab-content hidden mt-4 pl-1">
+                            <p class="text-gray-400 mb-4 leading-relaxed">
+                                Generate project plans, summarize meeting notes,
+                                and draft documents in seconds.
+                            </p>
+                            <a
+                                href="#"
+                                class="text-white font-medium hover:text-blue-400 inline-flex items-center gap-1 transition-colors"
+                            >
+                                Learn more
+                                <svg
+                                    class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path></svg
+                                >
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Wikis Tab -->
+                    <div
+                        class="feature-tab group cursor-pointer"
+                        data-target="wikis"
+                    >
+                        <h3
+                            class="text-3xl font-bold text-gray-500 group-hover:text-gray-300 transition-colors duration-300"
+                        >
+                            Wikis
+                        </h3>
+                        <div class="tab-content hidden mt-4 pl-1">
+                            <p class="text-gray-400 mb-4 leading-relaxed">
+                                Centralize your team's knowledge. From standard
+                                operating procedures to onboarding guides.
+                            </p>
+                            <a
+                                href="#"
+                                class="text-white font-medium hover:text-blue-400 inline-flex items-center gap-1 transition-colors"
+                            >
+                                Learn more
+                                <svg
+                                    class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path></svg
+                                >
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Projects Tab -->
+                    <div
+                        class="feature-tab group cursor-pointer"
+                        data-target="projects"
+                    >
+                        <h3
+                            class="text-3xl font-bold text-gray-500 group-hover:text-gray-300 transition-colors duration-300"
+                        >
+                            Projects
+                        </h3>
+                        <div class="tab-content hidden mt-4 pl-1">
+                            <p class="text-gray-400 mb-4 leading-relaxed">
+                                Manage any type of project. Visualize tasks with
+                                boards, timelines, tables, or calendars.
+                            </p>
+                            <a
+                                href="#"
+                                class="text-white font-medium hover:text-blue-400 inline-flex items-center gap-1 transition-colors"
+                            >
+                                Learn more
+                                <svg
+                                    class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path></svg
+                                >
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Docs Tab -->
+                    <div
+                        class="feature-tab group cursor-pointer"
+                        data-target="docs"
+                    >
+                        <h3
+                            class="text-3xl font-bold text-gray-500 group-hover:text-gray-300 transition-colors duration-300"
+                        >
+                            Docs
+                        </h3>
+                        <div class="tab-content hidden mt-4 pl-1">
+                            <p class="text-gray-400 mb-4 leading-relaxed">
+                                Beautiful documents that are easy to write and
+                                even easier to read.
+                            </p>
+                            <a
+                                href="#"
+                                class="text-white font-medium hover:text-blue-400 inline-flex items-center gap-1 transition-colors"
+                            >
+                                Learn more
+                                <svg
+                                    class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    ><path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path></svg
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Content Preview -->
+            <div class="lg:w-2/3 relative h-[600px]">
+                <div
+                    class="relative w-full h-full rounded-2xl border border-gray-800 bg-[#0C0C0C] overflow-hidden shadow-2xl"
+                >
+                    <!-- Top Bar UI -->
+                    <div
+                        class="h-10 border-b border-gray-800 flex items-center px-4 gap-3"
+                    >
+                        <div class="flex gap-2">
+                            <div class="w-2.5 h-2.5 rounded-full bg-red-500/50">
+                            </div>
+                            <div
+                                class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"
+                            >
+                            </div>
+                            <div
+                                class="w-2.5 h-2.5 rounded-full bg-green-500/50"
+                            >
+                            </div>
+                        </div>
+                        <div class="mx-auto text-xs font-mono text-gray-600">
+                            nexa.app
+                        </div>
+                    </div>
+
+                    <!-- Previews Container -->
+                    <div
+                        class="relative w-full h-full p-6"
+                        id="preview-container"
+                    >
+                        <!-- AI Preview -->
+                        <div
+                            class="preview-item absolute inset-0 p-8 transition-opacity duration-500 opacity-100"
+                            data-content="ai"
+                        >
+                            <div class="flex flex-col h-full max-w-2xl mx-auto">
+                                <div
+                                    class="w-full bg-[#1A1A1A] rounded-xl p-6 border border-gray-800 shadow-lg mb-4"
+                                >
+                                    <div
+                                        class="flex items-center gap-3 mb-4 text-purple-400"
+                                    >
+                                        <svg
+                                            class="w-5 h-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            ><path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z"
+                                            ></path></svg
+                                        >
+                                        <span class="text-sm font-bold"
+                                            >Nexa AI</span
+                                        >
+                                    </div>
+                                    <p class="text-gray-300 text-lg mb-2">
+                                        Summarize this Q3 Roadmap.
+                                    </p>
+                                    <div class="h-0.5 w-full bg-gray-800 mb-4">
+                                    </div>
+                                    <div class="space-y-2 animate-pulse">
+                                        <div
+                                            class="h-2 bg-gray-700 rounded w-full"
+                                        >
+                                        </div>
+                                        <div
+                                            class="h-2 bg-gray-700 rounded w-5/6"
+                                        >
+                                        </div>
+                                        <div
+                                            class="h-2 bg-gray-700 rounded w-4/6"
+                                        >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex-1 bg-[#151515] rounded-xl border border-gray-800 p-6 opacity-50 scale-95 origin-top"
+                                >
+                                    <div
+                                        class="h-4 bg-gray-700 w-1/3 rounded mb-4"
+                                    >
+                                    </div>
+                                    <div
+                                        class="h-2 bg-gray-800 w-full rounded mb-2"
+                                    >
+                                    </div>
+                                    <div
+                                        class="h-2 bg-gray-800 w-full rounded mb-2"
+                                    >
+                                    </div>
+                                    <div
+                                        class="h-2 bg-gray-800 w-3/4 rounded mb-2"
+                                    >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wikis Preview -->
+                        <div
+                            class="preview-item absolute inset-0 p-8 transition-opacity duration-500 opacity-0 pointer-events-none"
+                            data-content="wikis"
+                        >
+                            <div class="grid grid-cols-3 gap-4 h-[80%]">
+                                <!-- Sidebar Mock -->
+                                <div
+                                    class="col-span-1 bg-[#151515] rounded-lg border border-gray-800 p-4"
+                                >
+                                    <div
+                                        class="h-2 bg-gray-700 w-1/2 rounded mb-6"
+                                    >
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div
+                                            class="h-2 bg-gray-700 w-full rounded"
+                                        >
+                                        </div>
+                                        <div
+                                            class="h-2 bg-gray-700 w-3/4 rounded"
+                                        >
+                                        </div>
+                                        <div
+                                            class="h-2 bg-gray-700 w-5/6 rounded"
+                                        >
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Content Mock -->
+                                <div
+                                    class="col-span-2 bg-[#1A1A1A] rounded-lg border border-gray-800 p-6"
+                                >
+                                    <div
+                                        class="w-16 h-16 rounded-xl bg-orange-500/20 text-orange-500 flex items-center justify-center text-2xl mb-6"
+                                    >
+                                        📚
+                                    </div>
+                                    <h3
+                                        class="text-2xl font-bold text-white mb-4"
+                                    >
+                                        Engineering Wiki
+                                    </h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div
+                                            class="bg-[#111] p-4 rounded border border-gray-800"
+                                        >
+                                            <div
+                                                class="text-sm text-gray-400 mb-2"
+                                            >
+                                                Onboarding
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="bg-[#111] p-4 rounded border border-gray-800"
+                                        >
+                                            <div
+                                                class="text-sm text-gray-400 mb-2"
+                                            >
+                                                Processes
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="bg-[#111] p-4 rounded border border-gray-800"
+                                        >
+                                            <div
+                                                class="text-sm text-gray-400 mb-2"
+                                            >
+                                                Tech Stack
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects Preview -->
+                        <div
+                            class="preview-item absolute inset-0 p-8 transition-opacity duration-500 opacity-0 pointer-events-none"
+                            data-content="projects"
+                        >
+                            <div
+                                class="bg-[#1A1A1A] w-full h-full rounded-xl border border-gray-800 p-6 flex flex-col"
+                            >
+                                <div class="flex justify-between mb-6">
+                                    <div class="h-6 bg-gray-700 w-32 rounded">
+                                    </div>
+                                    <div class="h-6 bg-gray-700 w-24 rounded">
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 h-full">
+                                    <div
+                                        class="flex-1 bg-[#111] rounded border border-gray-800 p-3"
+                                    >
+                                        <div
+                                            class="text-xs text-gray-500 mb-3 uppercase tracking-wider"
+                                        >
+                                            To Do
+                                        </div>
+                                        <div
+                                            class="bg-[#222] p-3 rounded mb-2 border border-gray-700/50"
+                                        >
+                                            <div
+                                                class="h-2 bg-gray-600 w-3/4 rounded"
+                                            >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="bg-[#222] p-3 rounded mb-2 border border-gray-700/50"
+                                        >
+                                            <div
+                                                class="h-2 bg-gray-600 w-full rounded"
+                                            >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-[#111] rounded border border-gray-800 p-3"
+                                    >
+                                        <div
+                                            class="text-xs text-blue-500 mb-3 uppercase tracking-wider"
+                                        >
+                                            In Progress
+                                        </div>
+                                        <div
+                                            class="bg-[#222] p-3 rounded mb-2 border border-gray-700/50"
+                                        >
+                                            <div
+                                                class="h-2 bg-gray-600 w-5/6 rounded"
+                                            >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-[#111] rounded border border-gray-800 p-3"
+                                    >
+                                        <div
+                                            class="text-xs text-green-500 mb-3 uppercase tracking-wider"
+                                        >
+                                            Done
+                                        </div>
+                                        <div
+                                            class="bg-[#222] p-3 rounded mb-2 border border-gray-700/50 opacity-50"
+                                        >
+                                            <div
+                                                class="h-2 bg-gray-600 w-1/2 rounded"
+                                            >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Docs Preview -->
+                        <div
+                            class="preview-item absolute inset-0 p-8 transition-opacity duration-500 opacity-0 pointer-events-none"
+                            data-content="docs"
+                        >
+                            <div
+                                class="max-w-xl mx-auto bg-white text-gray-900 rounded-xl h-full shadow-2xl overflow-hidden relative"
+                            >
+                                <div
+                                    class="h-32 bg-gradient-to-r from-blue-100 to-indigo-100"
+                                >
+                                </div>
+                                <div class="p-8">
+                                    <h1
+                                        class="text-3xl font-bold mb-6 text-black"
+                                    >
+                                        Product Spec: Q3
+                                    </h1>
+                                    <div class="space-y-4 text-gray-600">
+                                        <p>
+                                            This document outlines the core
+                                            features for the upcoming release
+                                            cycle.
+                                        </p>
+                                        <ul class="list-disc pl-5 space-y-2">
+                                            <li>Improved search performance</li>
+                                            <li>Native sidebar navigation</li>
+                                            <li>Dark mode support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Cursor -->
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-4 flex items-center gap-2"
+                                >
+                                    <svg
+                                        class="w-4 h-4 text-pink-500 fill-current"
+                                        viewBox="0 0 24 24"
+                                        ><path
+                                            d="M5.5 3.21l10.8 15.65-5.6.8-2.5 5.5-3.3-1.5 2.5-5.5L2 16.79 5.5 3.21z"
+                                        ></path></svg
+                                    >
+                                    <div
+                                        class="bg-pink-500 text-white text-xs px-2 py-0.5 rounded"
+                                    >
+                                        Sarah
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".feature-tab");
+        const contents = document.querySelectorAll(".preview-item");
+        let activeIndex = 0;
+
+        function setActiveTab(index) {
+            // Update Tabs
+            tabs.forEach((tab, i) => {
+                const title = tab.querySelector("h3");
+                const description = tab.querySelector(".tab-content");
+
+                if (i === index) {
+                    title.classList.remove("text-gray-500");
+                    title.classList.add("text-white");
+                    description.classList.remove("hidden");
+                } else {
+                    title.classList.add("text-gray-500");
+                    title.classList.remove("text-white");
+                    description.classList.add("hidden");
+                }
+            });
+
+            // Update Content
+            const target = tabs[index].dataset.target;
+            contents.forEach((content) => {
+                if (content.dataset.content === target) {
+                    content.classList.remove(
+                        "opacity-0",
+                        "pointer-events-none",
+                    );
+                    content.classList.add("opacity-100");
+                } else {
+                    content.classList.remove("opacity-100");
+                    content.classList.add("opacity-0", "pointer-events-none");
+                }
+            });
+
+            activeIndex = index;
+        }
+
+        // Initialize first tab
+        setActiveTab(0);
+
+        // Click handlers
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                setActiveTab(index);
+            });
+        });
+    });
+</script>
