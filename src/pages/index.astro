@@ -30,35 +30,59 @@ import NotionAppPreview from "../components/NotionAppPreview.astro";
 
 		<NotionNewFeature />
 
-		<section class="bg-gray-50 py-24 border-t border-b border-gray-200">
-			<div class="max-w-4xl mx-auto px-6 text-center">
+		<section
+			class="bg-[#050511] pt-24 pb-0 relative overflow-hidden border-t border-white/10"
+		>
+			<!-- Glow Effects -->
+			<div
+				class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-500/20 blur-[100px] pointer-events-none"
+			>
+			</div>
+
+			<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
 				<h2
-					class="text-3xl md:text-5xl font-bold mb-6 animate-on-scroll"
+					class="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight animate-on-scroll"
 				>
 					Get started for free
 				</h2>
 				<p
-					class="text-lg text-gray-600 mb-8 animate-on-scroll"
+					class="text-xl text-blue-200/80 mb-10 animate-on-scroll max-w-xl mx-auto"
 					style="transition-delay: 100ms"
 				>
 					Play around with it first. Pay and add your team later.
 				</p>
 				<div
-					class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll"
+					class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll mb-16"
 					style="transition-delay: 200ms"
 				>
 					<button
-						class="bg-black text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-800 transition-colors shadow-lg"
+						class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-500 transition-all hover:scale-105 shadow-xl shadow-blue-900/20"
 						>Try Replicate Notion free</button
 					>
 					<button
-						class="text-blue-600 font-medium hover:underline flex items-center justify-center gap-1 group"
+						class="text-white font-medium hover:text-blue-300 flex items-center justify-center gap-2 group px-6 py-4"
 						>Request a demo <span
 							aria-hidden="true"
 							class="group-hover:translate-x-1 transition-transform"
 							>&rarr;</span
 						></button
 					>
+				</div>
+
+				<!-- Hand Image -->
+				<div
+					class="relative w-[30rem] max-w-full mx-auto -mb-10 animate-fade-in-up"
+					style="animation-delay: 0.3s"
+				>
+					<div
+						class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#050511] to-transparent z-10"
+					>
+					</div>
+					<img
+						src="/images/hand-notion.png"
+						alt="Hand holding Replicate Notion logo"
+						class="w-full h-auto drop-shadow-2xl"
+					/>
 				</div>
 			</div>
 		</section>

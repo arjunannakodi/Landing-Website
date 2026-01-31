@@ -1,0 +1,450 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Pricing - Replicate Notion">
+    <Navbar />
+
+    <main class="pt-24 pb-20">
+        <!-- Header -->
+        <section class="max-w-4xl mx-auto px-6 text-center mb-20">
+            <h1
+                class="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6 font-inter"
+            >
+                Pricing
+            </h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto">
+                Use Replicate Notion for free with your whole team. Upgrade for
+                more storage and admin tools.
+            </p>
+
+            <!-- Toggle (Visual Only) -->
+            <div class="flex justify-center mt-10">
+                <div
+                    class="bg-gray-100 p-1 rounded-full flex items-center font-medium text-sm"
+                >
+                    <button
+                        class="px-6 py-2 bg-white rounded-full shadow-sm text-gray-900"
+                        >Monthly</button
+                    >
+                    <button class="px-6 py-2 text-gray-500 hover:text-gray-900"
+                        >Annually <span
+                            class="text-green-600 text-[10px] ml-1 font-bold"
+                            >-20%</span
+                        ></button
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Cards -->
+        <section class="max-w-7xl mx-auto px-6 mb-24">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Free Plan -->
+                <div
+                    class="rounded-3xl border border-gray-200 p-8 flex flex-col hover:shadow-xl transition-shadow duration-300 relative bg-white"
+                >
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Free
+                        </h3>
+                        <p class="text-gray-500 text-sm h-10">
+                            For organizing every corner of your work & life.
+                        </p>
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-5xl font-bold text-gray-900">$0</span>
+                    </div>
+                    <button
+                        class="w-full py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-900 rounded-xl font-bold mb-8 transition-colors"
+                    >
+                        Get started
+                    </button>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Collaborative workspace
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Integrate with Slack, GitHub, etc.
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Basic page analytics
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            7 day page history
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Invite 10 guests
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plus Plan -->
+                <div
+                    class="rounded-3xl border border-blue-200 bg-blue-50/30 p-8 flex flex-col hover:shadow-xl transition-shadow duration-300 relative"
+                >
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+                    >
+                        Most Popular
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Plus
+                        </h3>
+                        <p class="text-gray-500 text-sm h-10">
+                            A place for small groups to plan & get organized.
+                        </p>
+                    </div>
+                    <div class="mb-8 flex items-baseline gap-1">
+                        <span class="text-5xl font-bold text-gray-900">$8</span>
+                        <span class="text-gray-500 font-medium"
+                            >/ user / month</span
+                        >
+                    </div>
+                    <button
+                        class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold mb-8 transition-colors shadow-lg shadow-blue-200"
+                    >
+                        Get Plus
+                    </button>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <p
+                            class="font-bold text-xs uppercase text-gray-400 tracking-wider mb-2"
+                        >
+                            Everything in Free, plus:
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-blue-500"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Unlimited blocks for teams
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-blue-500"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Unlimited file uploads
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-blue-500"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            30 day page history
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-blue-500"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Invite 100 guests
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Plan -->
+                <div
+                    class="rounded-3xl border border-gray-200 p-8 flex flex-col hover:shadow-xl transition-shadow duration-300 relative bg-white"
+                >
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Business
+                        </h3>
+                        <p class="text-gray-500 text-sm h-10">
+                            For companies using Replicate Notion to connect
+                            several teams & tools.
+                        </p>
+                    </div>
+                    <div class="mb-8 flex items-baseline gap-1">
+                        <span class="text-5xl font-bold text-gray-900">$15</span
+                        >
+                        <span class="text-gray-500 font-medium"
+                            >/ user / month</span
+                        >
+                    </div>
+                    <button
+                        class="w-full py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-900 rounded-xl font-bold mb-8 transition-colors"
+                    >
+                        Get Business
+                    </button>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <p
+                            class="font-bold text-xs uppercase text-gray-400 tracking-wider mb-2"
+                        >
+                            Everything in Plus, plus:
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            SAML SSO
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Private teamspaces
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Bulk PDF export
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Advanced page analytics
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            90 day page history
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                class="w-5 h-5 text-gray-400"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                ><path
+                                    d="M5 13l4 4L19 7"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path></svg
+                            >
+                            Invite 250 guests
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-3xl mx-auto px-6 mb-24">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                Frequently asked questions
+            </h2>
+            <div class="space-y-6">
+                <details
+                    class="group bg-gray-50 p-6 rounded-2xl cursor-pointer"
+                >
+                    <summary
+                        class="flex justify-between items-center font-bold text-lg list-none"
+                    >
+                        Does Replicate Notion have a free plan?
+                        <span
+                            class="transition-transform group-open:rotate-180"
+                        >
+                            <svg
+                                class="w-6 h-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                ><path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path></svg
+                            >
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed">
+                        Yes! You can use Replicate Notion for free as an
+                        individual, with unlimited pages and blocks. You can
+                        also invite up to 10 guests.
+                    </p>
+                </details>
+
+                <details
+                    class="group bg-gray-50 p-6 rounded-2xl cursor-pointer"
+                >
+                    <summary
+                        class="flex justify-between items-center font-bold text-lg list-none"
+                    >
+                        What happens if I upgrade?
+                        <span
+                            class="transition-transform group-open:rotate-180"
+                        >
+                            <svg
+                                class="w-6 h-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                ><path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path></svg
+                            >
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed">
+                        You'll get access to more powerful features like
+                        unlimited file uploads, version history, and admin tools
+                        for teams.
+                    </p>
+                </details>
+
+                <details
+                    class="group bg-gray-50 p-6 rounded-2xl cursor-pointer"
+                >
+                    <summary
+                        class="flex justify-between items-center font-bold text-lg list-none"
+                    >
+                        Is my data secure?
+                        <span
+                            class="transition-transform group-open:rotate-180"
+                        >
+                            <svg
+                                class="w-6 h-6 text-gray-500"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                ><path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path></svg
+                            >
+                        </span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed">
+                        Absolutely. We use industry-standard encryption and
+                        security practices to keep your data safe.
+                    </p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</BaseLayout>
