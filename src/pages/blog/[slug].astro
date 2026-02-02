@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { blogPosts, type BlogPost } from "../../data/blog";
+
+export async function getStaticPaths() {
+    return blogPosts.map((post) => ({
+        params: { slug: post.slug },
+        props: { post },
+    }));
+}
+
+interface Props {
+    post: BlogPost;
+}
+
+const { post } = Astro.props;
+---
+
+<BaseLayout title={`${post.title} - Nexa Blog`}>
+    <Navbar />
+    <main class="min-h-screen pt-24 pb-24 px-6">
+        <article class="max-w-3xl mx-auto">
+            <header class="mb-12 text-center animate-fade-in-up">
+                <div class="mb-8">
+                    <a
+                        href="/blog"
+                        class="group text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2 text-sm font-medium border border-white/10 rounded-full px-4 py-2 hover:bg-white/5"
+                    >
+                        <span
+                            class="group-hover:-translate-x-1 transition-transform"
+                            >&larr;</span
+                        > Back to blog
+                    </a>
+                </div>
+
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-8 leading-[1.1]"
+                >
+                    {post.title}
+                </h1>
+
+                <div
+                    class="flex items-center justify-center gap-4 text-gray-400 text-sm"
+                >
+                    <time class="font-medium text-blue-400"
+                        >{post.publishDate}</time
+                    >
+                    {
+                        post.author && (
+                            <>
+                                <span class="text-white/20">&bull;</span>
+                                <span class="font-medium">{post.author}</span>
+                            </>
+                        )
+                    }
+                </div>
+            </header>
+
+            <div
+                class="aspect-video w-full rounded-3xl overflow-hidden mb-16 border border-white/10 shadow-2xl animate-fade-in-up"
+                style="animation-delay: 0.1s; animation-fill-mode: backwards;"
+            >
+                <img
+                    src={post.image}
+                    alt={post.title}
+                    class="w-full h-full object-cover"
+                />
+            </div>
+
+            <div
+                class="blog-content max-w-none text-lg animate-fade-in-up"
+                style="animation-delay: 0.2s; animation-fill-mode: backwards;"
+            >
+                <div set:html={post.content} />
+            </div>
+        </article>
+    </main>
+    <Footer />
+</BaseLayout>
+
+<style>
+    /* Styling for the injected HTML content */
+    .blog-content :global(h2) {
+        font-size: 1.875rem; /* 30px */
+        line-height: 2.25rem; /* 36px */
+        font-weight: 700;
+        color: white;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.025em;
+    }
+
+    .blog-content :global(p) {
+        color: #d1d5db; /* gray-300 */
+        line-height: 1.75;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-content :global(ul) {
+        list-style-type: disc;
+        list-style-position: inside;
+        margin-bottom: 1.5rem;
+        color: #d1d5db;
+    }
+
+    .blog-content :global(li) {
+        margin-bottom: 0.5rem;
+    }
+
+    .blog-content :global(strong) {
+        color: white;
+        font-weight: 600;
+    }
+
+    .blog-content :global(a) {
+        color: #60a5fa; /* blue-400 */
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .blog-content :global(a:hover) {
+        color: #93c5fd; /* blue-300 */
+    }
+</style>
