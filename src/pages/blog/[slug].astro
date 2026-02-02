@@ -2,17 +2,60 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import { blogPosts, type BlogPost } from "../../data/blog";
 
 export async function getStaticPaths() {
-    return blogPosts.map((post) => ({
-        params: { slug: post.slug },
-        props: { post },
-    }));
-}
+    // Fetch all posts to generate paths and pass data
+    const response = await fetch("http://landing-website.local/graphql", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            query: `
+                query GetPosts {
+                    posts(first: 100) {
+                        nodes {
+                            title
+                            slug
+                            content
+                            date
+                            featuredImage {
+                                node {
+                                    sourceUrl
+                                    altText
+                                }
+                            }
+                            author {
+                                node {
+                                    name
+                                }
+                            }
+                        }
+                    }
+                }
+            `,
+        }),
+    });
 
-interface Props {
-    post: BlogPost;
+    const { data } = await response.json();
+    const rawPosts = data?.posts?.nodes || [];
+
+    return rawPosts.map((post: any) => ({
+        params: { slug: post.slug },
+        props: {
+            post: {
+                title: post.title,
+                content: post.content,
+                publishDate: new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                }),
+                image:
+                    post.featuredImage?.node?.sourceUrl ||
+                    "/images/app-preview.png",
+                author: post.author?.node?.name,
+            },
+        },
+    }));
 }
 
 const { post } = Astro.props;
@@ -122,5 +165,11 @@ const { post } = Astro.props;
 
     .blog-content :global(a:hover) {
         color: #93c5fd; /* blue-300 */
+    }
+
+    .blog-content :global(img) {
+        border-radius: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 </style>
